@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/style.css">
+</head>
+
+<body>
+    <div class="wrapper">
+
+        <div id="nickname-dialog">
+            <div class="dialog-container">
+                <div>
+                    <input type="text" id="nickname-input" placeholder="请输入昵称..." autocomplete="off">
+                </div>
+                <div>
+                    <button id="nickname-confirm-btn">确  定</button>
+                </div>
+            </div>
+          </div>
+
+        <div class="room">
+            <!-- 头部 -->
+            <div class="room-header">
+                <img class="room-avator" src="image/logo.jpg">
+                <span class="room-name">Own 聊天室</span>
+            </div>
+
+            <div class="room-body">
+                <!-- 左侧 -->
+                <div class="room-body-left">
+                    <div id="msg-list"></div>
+
+                    <!-- 消息发送框 -->
+                    <div class="send-box">
+                        <form>
+                            <!-- autocomplete禁用自动完成功能 -->
+                            <textarea id="msg-textarea" autofocus placeholder="请输入信息..."></textarea>
+                            <div class="btn-box">
+                                <button type="button" id="send-btn">发送</button>
+                                <button type="button" id="close-btn">关闭</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+
+                <!-- 右侧 -->
+                <div class="room-body-right">
+                    <div class="online-box">在线人员(<span id="user-num">0</span>)</div>
+                    <ul id="user-list"></ul>
+                    <p id="no-user-text">当前无人在线哟~</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="/jquery-3.6.0.js"></script>
+    <script src="/script.js"></script>
+</body>
+
+</html>

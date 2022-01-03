@@ -1,0 +1,166 @@
+/* 昵称弹窗 */
+#nickname-dialog {
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: 1;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+
+}
+.dialog-container {
+    width: 260px;
+    height: 100px;
+    position: absolute;
+    padding: 10px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #fff;
+    border-radius: 10px;
+}
+#nickname-input {
+    width: 100%;
+    height: 40px;
+    border: none;
+    border-bottom: 2px solid #bbb;
+    background-color: #f3f3f3;
+    font-size: 23px;
+    color: #555;
+    text-align: center;
+    outline: none;
+}
+#nickname-confirm-btn {
+    display: block;
+    margin: 10px auto;
+    width: 100px;
+    height: 36px;
+    line-height: 24px;
+    text-align: center;
+    background-color: #1253a5;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+/* 对话框样式 */
+.room {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 50%;
+    left:  50%;
+    transform: translate(-50%, -50%);
+    width: 700px;
+    height: 600px;
+    padding: 10px;
+    border-radius: 10px;
+    border: 2px  solid #ccc;
+}
+
+/* 对话框头部样式 */
+.room-header {
+    display: flex;
+    align-items: center;
+    padding: 10px 0;
+}
+.room-avator {
+    display: block;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+}
+.room-name {
+    margin-left: 10px;
+}
+
+/** 对话框 body */
+.room-body {
+    flex: 1;
+    display: flex;
+    border-top: 1px solid #ccc;
+}
+
+/* 对话框左侧样式 */
+.room-body-left {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+#msg-list {
+    height: 400px;
+    overflow: auto;
+}
+.send-box {
+    border-top: 1px solid #ccc;
+    height: 120px;
+    padding-right: 10px;;
+    padding-top: 10px;
+}
+#msg-textarea {
+    display: block;
+    width: 100%;
+    height: 85px;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    padding: 5px;
+    resize: none;
+    font-size: 16px;
+    background: none;
+    border: 1px solid rgba(0,0, 0, 0.1);
+    background-color: #eee;
+    border-radius: 6px;
+    outline: none;
+}
+#msg-textarea:focus{
+    border: 1px solid rgba(0,0, 0, 0.3);
+}
+.btn-box {
+    display: flex;
+    justify-content: flex-end;
+}
+#send-btn, #close-btn {
+    width: 72px;
+    height: 24px;
+    line-height: 24px;
+    margin: 5px;
+    text-align: center;
+    background-color: #1253a5;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+
+
+/* 对话框右侧样式 */
+.room-body-right {
+    width: 210px;
+    box-sizing: border-box;
+    padding: 10px;
+    border-left: 1px solid #ccc;
+}
+.online-box {
+    font-size: 16px;
+    font-weight: 500;
+    margin-bottom: 10px;
+}
+#user-list {
+    height: 470px;
+    overflow: auto;
+}
+.user-item {
+    display: flex;
+    align-items: center;
+}
+.user-avator {
+    width: 30px;
+    height: 30px;
+}
+.user-nickname {
+    margin-left: 10px;
+}
